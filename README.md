@@ -201,22 +201,22 @@
     
 
   <div class="producto">
-      <img src="https://acdn-us.mitiendanube.com/stores/001/924/849/products/9pm-rebel-5f9d7b8df23e527dfd17364538619487-1024-1024.jpeg" alt="Perfume 9PM">
+      <img src="https://acdn-us.mitiendanube.com/stores/001/924/849/products/9pm-rebel-5f9d7b8df23e527dfd17364538619487-1024-1024.jpeg" alt="Perfume 9PM Rebel">
       <h3>9PM Rebel</h3>
-      <p>100ml: $62000 </p>
-      <p>Decant 5ml: $ 7500</p>
+      <p>100ml: $67000 </p>
+      <p>Decant 5ml: $ 8500</p>
     </div>
     
 
 <div class="producto">
-  <img src="https://www.worldshop.com.py/img/49713/produtos/960/9ee9d77f06f2a63f01df7a.jpg
+ <img src="https://m.media-amazon.com/images/I/71lS8fvleIL._SL1500_.jpg" alt="Art of Arabia 1">
   <h3>Art of Arabia 1</h3>
   <p>100ml: $67000</p>
   <p>Decant 5ml: $9000</p>
 </div>
 
 <div class="producto">
-  <img src="https://cdn.v2.tiendanegocio.com/gallery/22278/img_2223838.jpeg
+  <img src="https://cdn.v2.tiendanegocio.com/gallery/22278/img_22278_18d7f5f3838.jpeg" alt="Club de Nuit iconic">
   <h3>Club de Nuit Iconic</h3>
   <p>100ml: $71000</p>
   <p>Decant 5ml: $9000</p>
