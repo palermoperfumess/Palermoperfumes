@@ -315,6 +315,11 @@
       <h3>Cargador Iphone Certificado 20W </h3>
       <p>$ 21000</p>
     </div>
+     <div class="producto">
+      <img src="https://puntotienda.com.py/wp-content/uploads/2023/11/le-male.jpg" alt="Perfumes de diseñador Tester">
+      <h3>Perfumes de diseñador Tester(consultar precio en Whatsapp</h3>
+      <p>100ml: $ </p>
+    </div>
 
     
 </section>
