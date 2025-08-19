@@ -150,85 +150,84 @@
     <div class="producto">
       <img src="https://http2.mlstatic.com/D_Q_NP_852085-MLA80071541612_102024-O.webp" alt="Perfume Liquid Brun 100ml">
       <h3>Liquid Brun</h3>
-      <p>Botella 100ml: $ 79000</p>
-      <p>Decant 5ml: $ 10000</p>
+      <p>Botella 100ml: $ 69000</p>
     </div>
 
     <div class="producto">
       <img src="https://d22fxaf9t8d39k.cloudfront.net/d4f256ba89932cfc21fd0fa7d8c13c80d65b40cb9a06428bba7813bfcc037d2d108925.webp" alt="Perfume Hawas Black">
       <h3>Hawas Black</h3>
-      <p>Botella 100ml: $ 72000</p>
+      <p>Botella 100ml: $ 64000</p>
       <p>Decant 5ml: $ 9500</p>
     </div>
 
     <div class="producto">
       <img src="https://http2.mlstatic.com/D_609475-MLU77667701668_072024-C.jpg" alt="Perfume Hawas for Him">
       <h3>Hawas for Him</h3>
-      <p>Botella 100ml: $ 63000</p>
+      <p>Botella 100ml: $ 55000</p>
       <p>Decant 5ml: $ 9000</p>
     </div>
 
     <div class="producto">
       <img src="https://d3cdlnm7te7ky2.cloudfront.net/media/catalog/product/cache/1f1b8d9a1b49678555bea203c2f52e39/1/5/155854-b-hawas-ice-men-edp-100ml.jpg" alt="Perfume Hawas Ice">
       <h3>Hawas Ice</h3>
-      <p>Botella 100ml: $ 70000</p>
+      <p>Botella 100ml: $ 62000</p>
     </div>
 
     <div class="producto">
       <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.110808.jpg" alt="Perfume Hawas Elixir">
       <h3>Hawas Elixir</h3>
-      <p>Botella 100ml: $ 73000</p>
+      <p>Botella 100ml: $ 66000</p>
     </div>
 
     <div class="producto">
       <img src="https://http2.mlstatic.com/D_NQ_NP_991070-MLA81953006706_022025-O.webp" alt="Perfume Bharara King">
       <h3>Bharara King</h3>
-      <p>Botella 100ml: $ 90000</p>
+      <p>Botella 100ml: $ 88000</p>
       <p>Decant 5ml: $ 12000</p>
     </div> 
 
     <div class="producto">
       <img src="https://http2.mlstatic.com/D_843651-MLU76296948587_052024-C.jpg" alt="Perfume Amber Oud Gold Edition">
       <h3>Amber Oud</h3>
-      <p>Botella 100ml: $ 89999</p>
+      <p>Botella 100ml: $ 85000</p>
     </div>
   
     <div class="producto">
       <img src="https://http2.mlstatic.com/D_NQ_NP_855959-MLA53669241732_022023-O.webp" alt="Perfume 9PM">
       <h3>9PM</h3>
-      <p>100ml: $62000 </p>
+      <p>100ml: $57000 </p>
       <p>Decant 5ml: $ 7500</p>
     </div>
     
 
-     <div class="producto">
+    <div class="producto">
       <img src="https://fimgs.net/mdimg/perfume/o.99238.jpg" alt="Perfume 9PM Rebel">
       <h3>9PM Rebel</h3>
-      <p>100ml: $ 69999</p>
+      <p>100ml: $ 62000</p>
       <p>Decant 5ml: $ 9000</p>
-     </div>
+    </div>
     
 
-     <div class="producto">
-       <img src="https://u.makeup.com.ua/k/k8/k8hxu147fzcl.jpg" alt="Art Of Arabia 1">
-       <h3>Art Of Arabia 1</h3>
-       <p>100ml: $ 67000</p>
-       <p>Decant 5ml: $ 9000</p>
-     </div>
+    <div class="producto">
+      <img src="https://u.makeup.com.ua/k/k8/k8hxu147fzcl.jpg" alt="Art Of Arabia 1">
+      <h3>Art Of Arabia 1</h3>
+      <p>100ml: $ 62000</p>
+      <p>Decant 5ml: $ 9000</p>
+    </div>
+    
 
     <div class="producto">
       <img src="https://fimgs.net/mdimg/perfume/o.78475.jpg" alt="Club de Nuit Iconic">
       <h3>Club de Nuit Iconic</h3>
-      <p>100ml: $ 71000</p>
+      <p>100ml: $ 63000</p>
       <p>Decant 5ml: $ 9000</p>
     </div>
-    
     
 
     <div class="producto">
       <img src="https://acdn-us.mitiendanube.com/stores/004/878/940/products/03-a-36b6bee3b801d1e1b817214141637364-1024-1024.jpg" alt="Perfume Club de Nuit Urban Man Elixir">
       <h3>Club de Nuit Urban Man Elixir</h3>
-      <p>100ml: $ 72000</p>
+      <p>100ml: $ 61000</p>
       <p>Decant 5ml: $ 8600</p>
     </div>
     
@@ -236,7 +235,7 @@
     <div class="producto">
       <img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/hayaati-c6426e81b3e9f6bd3b17101000099209-640-0.webp" alt="Perfume Hayatti">
       <h3>Lataffa Hayaati</h3>
-      <p>100ml: $ 55000</p>
+      <p>100ml: $ 47000</p>
       <p>Decant 5ml: $ 7000</p>
     </div>
     
@@ -244,7 +243,7 @@
     <div class="producto">
       <img src="https://perfumescardales.com.ar/wp-content/uploads/2023/06/ishq-gold-1.jpg" alt="Perfume Ishq Al Shuyukh Gold">
       <h3>Ishq Al Shuyukh Gold</h3>
-      <p>100ml: $ 60000 </p>
+      <p>100ml: $ 54000 </p>
       <p>Decant 5ml: $ 7500</p>
     </div>
     
@@ -252,7 +251,7 @@
     <div class="producto">
       <img src="https://http2.mlstatic.com/D_NQ_NP_794813-MLA82979797869_032025-O.webp" alt="Perfume Jean Lowe Immortal">
       <h3>Jean Lowe Immortal</h3>
-      <p>100ml: $ 53000</p>
+      <p>100ml: $ 45000</p>
       <p>Decant 5ml: $ 7000</p>
     </div>
     
@@ -260,7 +259,7 @@
     <div class="producto">
       <img src="https://d3cdlnm7te7ky2.cloudfront.net/media/catalog/product/cache/1f1b8d9a1b49678555bea203c2f52e39/1/5/155511-b-khamrah-qahwa-edp-100ml.jpg" alt="Perfume Khamrah Qahwa">
       <h3>Khamrah Qahwa</h3>
-      <p>100ml: $ 68000</p>
+      <p>100ml: $ 59000</p>
       <p>Decant 5ml: $ 8500</p>
     </div>
     
@@ -268,7 +267,7 @@
     <div class="producto">
       <img src="https://acdn-us.mitiendanube.com/stores/003/226/824/products/1024-x-1024-px-2025-05-08t201634-631-f0b893b56cadb00ad417467461990687-1024-1024.jpg" alt="Perfume Lataffa Kingdom">
       <h3>Lataffa Kingdom</h3>
-      <p>100ml: $ 67000</p>
+      <p>100ml: $ 60000</p>
       <p>Decant 5ml: $ 9000</p>
     </div>
     
@@ -276,7 +275,7 @@
     <div class="producto">
       <img src="https://layla-andco.com/cdn/shop/files/DE4B3489-D89C-4E1B-AC03-DCA2FB1D1378.jpg?v=1710768589" alt="Perfume Lataffa Yara Rose">
       <h3>Lataffa Yara Rose</h3>
-      <p>100ml: $ 63000</p>
+      <p>100ml: $ 55000</p>
       <p>Decant 5ml: $ 8000</p>
     </div>
     
@@ -284,7 +283,7 @@
     <div class="producto">
       <img src="https://http2.mlstatic.com/D_NQ_NP_886355-MLU74668053191_022024-O.webp" alt="Perfume Supremacy Not Only Intense">
       <h3>Supremacy Not Only Intense</h3>
-      <p>100ml: $ 79000</p>
+      <p>100ml: $ 63000</p>
       <p>Decant 5ml: $ 10000</p>
     </div>
     
@@ -292,29 +291,29 @@
     <div class="producto">
       <img src="https://http2.mlstatic.com/D_NQ_NP_706392-CBT83047220019_032025-O.webp" alt="Perfume Vintage Radio">
       <h3>Vintage Radio</h3>
-      <p>100ml: $ 72000</p>
+      <p>100ml: $ 62000</p>
       <p>Decant 5ml: $ 9000</p>
     </div>
     <div class="producto">
       <img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/asad-d1a6c449c4071fd13017149465284044-480-0.webp" alt="Lataffa Asad">
       <h3>Lataffa asad</h3>
-      <p>100ml: $ 58000</p>
+      <p>100ml: $ 50000</p>
     </div>
     <div class="producto">
       <img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/asad-bourbon-8333192b3cc78bfa1017364419270910-1024-1024.jpg" alt="Asad Bourbon">
       <h3>Asad Bourbon</h3>
-      <p>100ml: $ 65000</p>
+      <p>100ml: $ 59000</p>
     </div>
 
     <div class="producto">
       <img src="https://www.apple.com/v/airpods-pro/n/images/meta/og__eui2mpgzwyaa_overview.png" alt="AirPods Pro 2">
       <h3>AirPods Pro 2(con garantia apple de 1 año)</h3>
-      <p>$ 45000</p>
+      <p>$ 33000</p>
     </div>
     <div class="producto">
       <img src="https://http2.mlstatic.com/D_NQ_NP_641270-MLA77137899388_062024-O.webp" alt="Cargador Iphone Certificado 20W">
       <h3>Cargador Iphone Certificado 20W </h3>
-      <p>$ 28000</p>
+      <p>$ 21000</p>
     </div>
 
     
@@ -333,32 +332,31 @@
       <select name="perfume" id="perfume" required>
         <option value="" disabled selected>Seleccionar perfume</option>
         <!-- Botellas -->
-        <option value="$ 79000">Liquid Brun - Botella 100ml</option>
-        <option value="$ 63000">Hawas for Him - Botella 100ml</option>
-        <option value="$ 72000">Hawas Black - Botella 100ml</option>
-        <option value="$ 70000">Hawas Ice - Botella 100ml</option>
-        <option value="$ 73000">Hawas Elixir - Botella 100ml</option>
-        <option value="$ 90000">Bharara King - Botella 100ml</option>
-        <option value="$ 89999">Amber Oud - Botella 100ml</option>
-        <option value="$ 62000">9PM - Botella 100ml </option>
-        <option value="$ 67000">9PM Rebel - Botella 100ml </option>
-        <option value="$ 67000">Art of Arabia 1 - 100ml</option>
-        <option value="$ 90000">Bharara King - 100ml</option>
-        <option value="$ 71000">Club de Nuit Iconic - 100ml</option>
-        <option value="$ 72000">Club de Nuit Urban Man Elixir - 100ml</option>
-        <option value="$ 55000">Hayatti - 100ml</option>
-        <option value="$ 63000">Hawas for Him - 100ml</option>
-        <option value="$ 60000">Ishq Al Shuyukh Gold - 100ml</option>
-        <option value="$ 53000">Jean Lowe Immortal - 100ml</option>
-        <option value="$ 68000">Khamrah Qahwa - 100ml</option>
-        <option value="$ 67000">Lataffa Kingdom - 100ml</option>
-        <option value="$ 63000">Lataffa Yara Rose - 100ml</option>
-        <option value="$ 79000">Supremacy Not Only Intense - 100ml</option>
-        <option value="$ 72000">Vintage Radio - 100ml</option>
-        <option value="$ 58000">Asad Botella 100ml</option>
-        <option value="$ 65000">Asad Bourbon 100ml - </option>
-        <option value="$ 45000">AirPods Pro 2(con garantia apple de 1 año)</option>
-        <option value="$ 28000">Cargador Iphone Certificado 20W</option>
+        <option value="$ 69000">Liquid Brun - Botella 100ml</option>
+        <option value="$ 55000">Hawas for Him - Botella 100ml</option>
+        <option value="$ 64000">Hawas Black - Botella 100ml</option>
+        <option value="$ 62000">Hawas Ice - Botella 100ml</option>
+        <option value="$ 66000">Hawas Elixir - Botella 100ml</option>
+        <option value="$ 88000">Bharara King - Botella 100ml</option>
+        <option value="$ 85000">Amber Oud - Botella 100ml</option>
+        <option value="$ 57000">9PM - Botella 100ml </option>
+        <option value="$ 62000">9PM Rebel - Botella 100ml </option>
+        <option value="$ 62000">Art of Arabia 1 - 100ml</option>
+        <option value="$ 63000">Club de Nuit Iconic - 100ml</option>
+        <option value="$ 61000">Club de Nuit Urban Man Elixir - 100ml</option>
+        <option value="$ 47000">Hayatti - 100ml</option>
+        <option value="$ 55000">Hawas for Him - 100ml</option>
+        <option value="$ 54000">Ishq Al Shuyukh Gold - 100ml</option>
+        <option value="$ 46000">Jean Lowe Immortal - 100ml</option>
+        <option value="$ 59000">Khamrah Qahwa - 100ml</option>
+        <option value="$ 60000">Lataffa Kingdom - 100ml</option>
+        <option value="$ 57000">Lataffa Yara Rose - 100ml</option>
+        <option value="$ 63000">Supremacy Not Only Intense - 100ml</option>
+        <option value="$ 62000">Vintage Radio - 100ml</option>
+        <option value="$ 50000">Asad Botella 100ml</option>
+        <option value="$ 59000">Asad Bourbon 100ml - </option>
+        <option value="$ 33000">AirPods Pro 2(con garantia apple de 1 año)</option>
+        <option value="$ 21000">Cargador Iphone Certificado 20W</option>
         <!-- Decants -->
         <option value="$ 7500">9PM - Decant 5ml</option>
         <option value="$ 9000">9PM Rebel - Decant 5ml</option>
