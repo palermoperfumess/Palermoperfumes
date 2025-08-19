@@ -307,7 +307,7 @@
 
     <div class="producto">
       <img src="https://www.apple.com/v/airpods-pro/n/images/meta/og__eui2mpgzwyaa_overview.png" alt="AirPods Pro 2">
-      <h3>AirPods Pro 2(con garantia apple de 1 año)</h3>
+      <h3>AirPods Pro 2(Triple A,La mejor calidad.)</h3>
       <p>$ 33000</p>
     </div>
     <div class="producto">
