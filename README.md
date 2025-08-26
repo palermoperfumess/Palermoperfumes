@@ -1,450 +1,395 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Perfumes Árabes - Tienda Online</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Perfumes y Tecnología</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f8f8f8;
+      padding: 0;
+      background: #f5f5f5;
+      scroll-behavior: smooth;
     }
 
-    header, footer {
-      background-color: #1c1c1c;
+    header {
+      background: #111;
       color: white;
-      padding: 20px;
+      padding: 1.5rem;
       text-align: center;
     }
 
-    h1, h2 {
-      margin-top: 0;
+    h2 {
+      text-align: center;
+      margin: 1rem 0;
     }
 
     .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
     }
 
     .producto {
       background: white;
-      width: 220px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 0.8rem;
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.2s ease-in-out;
     }
 
     .producto:hover {
-      transform: translateY(-8px);
+      transform: translateY(-5px);
     }
 
     .producto img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
+      max-width: 100%;
+      height: 140px;
+      object-fit: contain;
+      border-radius: 10px;
     }
 
     .producto h3 {
-      margin: 10px 0 5px;
+      font-size: 0.9rem;
+      margin: 0.5rem 0;
     }
 
     .producto p {
-      margin: 5px 0;
-      color: #444;
+      margin: 0.3rem 0;
+      font-size: 0.8rem;
     }
 
-    .formulario {
-      max-width: 500px;
-      margin: 40px auto;
+    .btn {
+      margin-top: 0.4rem;
+      padding: 0.4rem 0.8rem;
+      border: none;
+      background: #111;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #444;
+    }
+
+    .pedido {
       background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    input, select, textarea {
+    .pedido h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .pedido label {
+      display: block;
+      margin: 0.5rem 0 0.2rem 0;
+      font-weight: bold;
+    }
+
+    .pedido input, .pedido textarea, .pedido select {
       width: 100%;
-      padding: 12px;
-      margin-top: 10px;
+      padding: 0.5rem;
+      margin-bottom: 0.8rem;
+      border-radius: 8px;
       border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
+      font-size: 0.9rem;
     }
 
-    button {
-      background-color: #27ae60;
+    .pedido button {
+      width: 100%;
+      padding: 0.7rem;
+      background: #111;
       color: white;
       border: none;
-      padding: 12px;
-      margin-top: 15px;
-      width: 100%;
-      border-radius: 5px;
-      font-size: 16px;
+      border-radius: 8px;
       cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
     }
 
-    button:hover {
-      background-color: #219150;
+    .pedido button:hover {
+      background: #444;
     }
 
-    ul {
-      padding-left: 20px;
-    }
-
-    a {
+    .ir-pedido {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 1rem auto;
+      padding: 0.5rem 1rem;
+      background: #27ae60;
       color: white;
-      text-decoration: underline;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-
-    .whatsapp-float img {
-      width: 60px;
-      height: 60px;
-    }
-
-    #precio {
-      margin-top: 10px;
+      border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
-      color: #27ae60;
+      transition: background 0.3s;
+    }
+
+    .ir-pedido:hover {
+      background: #219150;
     }
 
     @media (max-width: 600px) {
-      .galeria {
-        flex-direction: column;
-        align-items: center;
+      .producto img {
+        height: 120px;
       }
-
-      .producto {
-        width: 90%;
+      .producto h3 {
+        font-size: 0.85rem;
       }
-
-      input, select, textarea {
-        font-size: 14px;
+      .producto p {
+        font-size: 0.75rem;
       }
-
-      button {
-        font-size: 15px;
+      .btn {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.6rem;
+      }
+      .pedido input, .pedido textarea, .pedido select {
+        font-size: 0.85rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Perfumes Árabes Originales y decants</h1>
-    <p>Envíos a todo el país - Entrega inmediata en CABA </p>
+    <h1>Tienda de Perfumes y Tecnología</h1>
+    <p>Envíos a todo el país. Hacé tu pedido directo por WhatsApp o con el formulario.</p>
   </header>
 
-  <section class="galeria">
+  <a href="#formulario" class="ir-pedido">Ir al formulario de pedido</a>
+
+  <h2>Perfumes</h2>
+  <section class="galeria" id="perfumes">
     <div class="producto">
-      <img src="https://http2.mlstatic.com/D_Q_NP_852085-MLA80071541612_102024-O.webp" alt="Perfume Liquid Brun 100ml">
+      <img src="https://http2.mlstatic.com/D_Q_NP_852085-MLA80071541612_102024-O.webp" alt="Liquid Brun">
       <h3>Liquid Brun</h3>
-      <p>Botella 100ml: $ 69000</p>
+      <p>Botella 100ml: $69000</p>
+      <button class="btn" onclick="pedir('Liquid Brun - $69000')">Pedir</button>
     </div>
 
     <div class="producto">
-      <img src="https://d22fxaf9t8d39k.cloudfront.net/d4f256ba89932cfc21fd0fa7d8c13c80d65b40cb9a06428bba7813bfcc037d2d108925.webp" alt="Perfume Hawas Black">
+      <img src="https://d22fxaf9t8d39k.cloudfront.net/d4f256ba89932cfc21fd0fa7d8c13c80d65b40cb9a06428bba7813bfcc037d2d108925.webp" alt="Hawas Black">
       <h3>Hawas Black</h3>
-      <p>Botella 100ml: $ 64000</p>
-      <p>Decant 5ml: $ 9500</p>
+      <p>Botella 100ml: $64000</p>
+      <p>Decant 5ml: $9500</p>
+      <button class="btn" onclick="pedir('Hawas Black - Botella 100ml')">Pedir</button>
     </div>
 
     <div class="producto">
-      <img src="https://http2.mlstatic.com/D_609475-MLU77667701668_072024-C.jpg" alt="Perfume Hawas for Him">
+      <img src="https://http2.mlstatic.com/D_609475-MLU77667701668_072024-C.jpg" alt="Hawas for Him">
       <h3>Hawas for Him</h3>
-      <p>Botella 100ml: $ 55000</p>
-      <p>Decant 5ml: $ 9000</p>
+      <p>Botella 100ml: $55000</p>
+      <p>Decant 5ml: $9000</p>
+      <button class="btn" onclick="pedir('Hawas for Him - Botella 100ml')">Pedir</button>
     </div>
 
     <div class="producto">
-      <img src="https://d3cdlnm7te7ky2.cloudfront.net/media/catalog/product/cache/1f1b8d9a1b49678555bea203c2f52e39/1/5/155854-b-hawas-ice-men-edp-100ml.jpg" alt="Perfume Hawas Ice">
+      <img src="https://d3cdlnm7te7ky2.cloudfront.net/media/catalog/product/cache/1f1b8d9a1b49678555bea203c2f52e39/1/5/155854-b-hawas-ice-men-edp-100ml.jpg" alt="Hawas Ice">
       <h3>Hawas Ice</h3>
-      <p>Botella 100ml: $ 62000</p>
+      <p>Botella 100ml: $62000</p>
+      <button class="btn" onclick="pedir('Hawas Ice - Botella 100ml')">Pedir</button>
     </div>
 
     <div class="producto">
-      <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.110808.jpg" alt="Perfume Hawas Elixir">
+      <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.110808.jpg" alt="Hawas Elixir">
       <h3>Hawas Elixir</h3>
-      <p>Botella 100ml: $ 66000</p>
+      <p>Botella 100ml: $66000</p>
+      <button class="btn" onclick="pedir('Hawas Elixir - Botella 100ml')">Pedir</button>
     </div>
 
     <div class="producto">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_991070-MLA81953006706_022025-O.webp" alt="Perfume Bharara King">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_991070-MLA81953006706_022025-O.webp" alt="Bharara King">
       <h3>Bharara King</h3>
-      <p>Botella 100ml: $ 88000</p>
-      <p>Decant 5ml: $ 12000</p>
-    </div> 
+      <p>Botella 100ml: $88000</p>
+      <p>Decant 5ml: $12000</p>
+      <button class="btn" onclick="pedir('Bharara King - Botella 100ml')">Pedir</button>
+    </div>
 
     <div class="producto">
-      <img src="https://http2.mlstatic.com/D_843651-MLU76296948587_052024-C.jpg" alt="Perfume Amber Oud Gold Edition">
+      <img src="https://http2.mlstatic.com/D_843651-MLU76296948587_052024-C.jpg" alt="Amber Oud">
       <h3>Amber Oud</h3>
-      <p>Botella 100ml: $ 85000</p>
+      <p>Botella 100ml: $85000</p>
+      <button class="btn" onclick="pedir('Amber Oud - Botella 100ml')">Pedir</button>
     </div>
-  
+
     <div class="producto">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_855959-MLA53669241732_022023-O.webp" alt="Perfume 9PM">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_855959-MLA53669241732_022023-O.webp" alt="9PM">
       <h3>9PM</h3>
-      <p>100ml: $57000 </p>
-      <p>Decant 5ml: $ 7500</p>
+      <p>Botella 100ml: $57000</p>
+      <p>Decant 5ml: $7500</p>
+      <button class="btn" onclick="pedir('9PM - Botella 100ml')">Pedir</button>
     </div>
-    
 
     <div class="producto">
-      <img src="https://fimgs.net/mdimg/perfume/o.99238.jpg" alt="Perfume 9PM Rebel">
+      <img src="https://fimgs.net/mdimg/perfume/o.99238.jpg" alt="9PM Rebel">
       <h3>9PM Rebel</h3>
-      <p>100ml: $ 62000</p>
-      <p>Decant 5ml: $ 9000</p>
+      <p>Botella 100ml: $62000</p>
+      <p>Decant 5ml: $9000</p>
+      <button class="btn" onclick="pedir('9PM Rebel - Botella 100ml')">Pedir</button>
     </div>
-    
 
     <div class="producto">
-      <img src="https://u.makeup.com.ua/k/k8/k8hxu147fzcl.jpg" alt="Art Of Arabia 1">
+      <img src="https://u.makeup.com.ua/k/k8/k8hxu147fzcl.jpg" alt="Art of Arabia 1">
       <h3>Art Of Arabia 1</h3>
-      <p>100ml: $ 62000</p>
-      <p>Decant 5ml: $ 9000</p>
+      <p>Botella 100ml: $62000</p>
+      <p>Decant 5ml: $9000</p>
+      <button class="btn" onclick="pedir('Art Of Arabia 1 - Botella 100ml')">Pedir</button>
     </div>
-    
 
     <div class="producto">
       <img src="https://fimgs.net/mdimg/perfume/o.78475.jpg" alt="Club de Nuit Iconic">
       <h3>Club de Nuit Iconic</h3>
-      <p>100ml: $ 63000</p>
-      <p>Decant 5ml: $ 9000</p>
+      <p>Botella 100ml: $63000</p>
+      <p>Decant 5ml: $9000</p>
+      <button class="btn" onclick="pedir('Club de Nuit Iconic - Botella 100ml')">Pedir</button>
     </div>
-    
 
     <div class="producto">
-      <img src="https://acdn-us.mitiendanube.com/stores/004/878/940/products/03-a-36b6bee3b801d1e1b817214141637364-1024-1024.jpg" alt="Perfume Club de Nuit Urban Man Elixir">
+      <img src="https://acdn-us.mitiendanube.com/stores/004/878/940/products/03-a-36b6bee3b801d1e1b817214141637364-1024-1024.jpg" alt="Club de Nuit Urban Man Elixir">
       <h3>Club de Nuit Urban Man Elixir</h3>
-      <p>100ml: $ 61000</p>
-      <p>Decant 5ml: $ 8600</p>
+      <p>Botella 100ml: $61000</p>
+      <p>Decant 5ml: $8600</p>
+      <button class="btn" onclick="pedir('Club de Nuit Urban Man Elixir - Botella 100ml')">Pedir</button>
     </div>
-    
 
     <div class="producto">
-      <img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/hayaati-c6426e81b3e9f6bd3b17101000099209-640-0.webp" alt="Perfume Hayatti">
+      <img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/hayaati-c6426e81b3e9f6bd3b17101000099209-640-0.webp" alt="Lataffa Hayaati">
       <h3>Lataffa Hayaati</h3>
-      <p>100ml: $ 47000</p>
-      <p>Decant 5ml: $ 7000</p>
+      <p>Botella 100ml: $47000</p>
+      <p>Decant 5ml: $7000</p>
+      <button class="btn" onclick="pedir('Lataffa Hayaati - Botella 100ml')">Pedir</button>
     </div>
-    
 
     <div class="producto">
-      <img src="https://perfumescardales.com.ar/wp-content/uploads/2023/06/ishq-gold-1.jpg" alt="Perfume Ishq Al Shuyukh Gold">
+      <img src="https://perfumescardales.com.ar/wp-content/uploads/2023/06/ishq-gold-1.jpg" alt="Ishq Al Shuyukh Gold">
       <h3>Ishq Al Shuyukh Gold</h3>
-      <p>100ml: $ 54000 </p>
-      <p>Decant 5ml: $ 7500</p>
+      <p>Botella 100ml: $54000</p>
+      <p>Decant 5ml: $7500</p>
+      <button class="btn" onclick="pedir('Ishq Al Shuyukh Gold - Botella 100ml')">Pedir</button>
     </div>
-    
 
     <div class="producto">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_794813-MLA82979797869_032025-O.webp" alt="Perfume Jean Lowe Immortal">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_794813-MLA82979797869_032025-O.webp" alt="Jean Lowe Immortal">
       <h3>Jean Lowe Immortal</h3>
-      <p>100ml: $ 45000</p>
-      <p>Decant 5ml: $ 7000</p>
+      <p>Botella 100ml: $45000</p>
+      <p>Decant 5ml: $7000</p>
+      <button class="btn" onclick="pedir('Jean Lowe Immortal - Botella 100ml')">Pedir</button>
     </div>
-    
 
     <div class="producto">
-      <img src="https://d3cdlnm7te7ky2.cloudfront.net/media/catalog/product/cache/1f1b8d9a1b49678555bea203c2f52e39/1/5/155511-b-khamrah-qahwa-edp-100ml.jpg" alt="Perfume Khamrah Qahwa">
+      <img src="https://d3cdlnm7te7ky2.cloudfront.net/media/catalog/product/cache/1f1b8d9a1b49678555bea203c2f52e39/1/5/155511-b-khamrah-qahwa-edp-100ml.jpg" alt="Khamrah Qahwa">
       <h3>Khamrah Qahwa</h3>
-      <p>100ml: $ 59000</p>
-      <p>Decant 5ml: $ 8500</p>
+      <p>Botella 100ml: $59000</p>
+      <p>Decant 5ml: $8500</p>
+      <button class="btn" onclick="pedir('Khamrah Qahwa - Botella 100ml')">Pedir</button>
     </div>
-    
 
     <div class="producto">
-      <img src="https://acdn-us.mitiendanube.com/stores/003/226/824/products/1024-x-1024-px-2025-05-08t201634-631-f0b893b56cadb00ad417467461990687-1024-1024.jpg" alt="Perfume Lataffa Kingdom">
+      <img src="https://acdn-us.mitiendanube.com/stores/003/226/824/products/1024-x-1024-px-2025-05-08t201634-631-f0b893b56cadb00ad417467461990687-1024-1024.jpg" alt="Lataffa Kingdom">
       <h3>Lataffa Kingdom</h3>
-      <p>100ml: $ 60000</p>
-      <p>Decant 5ml: $ 9000</p>
+      <p>Botella 100ml: $60000</p>
+      <p>Decant 5ml: $9000</p>
+      <button class="btn" onclick="pedir('Lataffa Kingdom - Botella 100ml')">Pedir</button>
     </div>
-    
 
     <div class="producto">
-      <img src="https://layla-andco.com/cdn/shop/files/DE4B3489-D89C-4E1B-AC03-DCA2FB1D1378.jpg?v=1710768589" alt="Perfume Lataffa Yara Rose">
+      <img src="https://layla-andco.com/cdn/shop/files/DE4B3489-D89C-4E1B-AC03-DCA2FB1D1378.jpg?v=1710768589" alt="Lataffa Yara Rose">
       <h3>Lataffa Yara Rose</h3>
-      <p>100ml: $ 55000</p>
-      <p>Decant 5ml: $ 8000</p>
+      <p>Botella 100ml: $55000</p>
+      <p>Decant 5ml: $8000</p>
+      <button class="btn" onclick="pedir('Lataffa Yara Rose - Botella 100ml')">Pedir</button>
     </div>
-    
 
     <div class="producto">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_886355-MLU74668053191_022024-O.webp" alt="Perfume Supremacy Not Only Intense">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_886355-MLU74668053191_022024-O.webp" alt="Supremacy Not Only Intense">
       <h3>Supremacy Not Only Intense</h3>
-      <p>100ml: $ 63000</p>
-      <p>Decant 5ml: $ 10000</p>
+      <p>Botella 100ml: $63000</p>
+      <p>Decant 5ml: $10000</p>
+      <button class="btn" onclick="pedir('Supremacy Not Only Intense - Botella 100ml')">Pedir</button>
     </div>
-    
 
     <div class="producto">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_706392-CBT83047220019_032025-O.webp" alt="Perfume Vintage Radio">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_706392-CBT83047220019_032025-O.webp" alt="Vintage Radio">
       <h3>Vintage Radio</h3>
-      <p>100ml: $ 62000</p>
-      <p>Decant 5ml: $ 9000</p>
+      <p>Botella 100ml: $62000</p>
+      <p>Decant 5ml: $9000</p>
+      <button class="btn" onclick="pedir('Vintage Radio - Botella 100ml')">Pedir</button>
     </div>
+
     <div class="producto">
       <img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/asad-d1a6c449c4071fd13017149465284044-480-0.webp" alt="Lataffa Asad">
-      <h3>Lataffa asad</h3>
-      <p>100ml: $ 50000</p>
+      <h3>Lataffa Asad</h3>
+      <p>Botella 100ml: $50000</p>
+      <button class="btn" onclick="pedir('Lataffa Asad - Botella 100ml')">Pedir</button>
     </div>
+
     <div class="producto">
       <img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/asad-bourbon-8333192b3cc78bfa1017364419270910-1024-1024.jpg" alt="Asad Bourbon">
       <h3>Asad Bourbon</h3>
-      <p>100ml: $ 59000</p>
+      <p>Botella 100ml: $59000</p>
+      <button class="btn" onclick="pedir('Asad Bourbon - Botella 100ml')">Pedir</button>
     </div>
+  </section>
 
+  <h2>Tecnología</h2>
+  <section class="galeria" id="tecnologia">
     <div class="producto">
       <img src="https://www.apple.com/v/airpods-pro/n/images/meta/og__eui2mpgzwyaa_overview.png" alt="AirPods Pro 2">
-      <h3>AirPods Pro 2(Triple A,La mejor calidad.)</h3>
-      <p>$ 33000</p>
+      <h3>AirPods Pro 2 (garantía 1 año)</h3>
+      <p>$33000</p>
+      <button class="btn" onclick="pedir('AirPods Pro 2 - $33000')">Pedir</button>
     </div>
     <div class="producto">
       <img src="https://http2.mlstatic.com/D_NQ_NP_641270-MLA77137899388_062024-O.webp" alt="Cargador Iphone Certificado 20W">
-      <h3>Cargador Iphone Certificado 20W </h3>
-      <p>$ 21000</p>
+      <h3>Cargador Iphone Certificado 20W</h3>
+      <p>$21000</p>
+      <button class="btn" onclick="pedir('Cargador Iphone Certificado 20W - $21000')">Pedir</button>
     </div>
-     <div class="producto">
-      <img src="https://puntotienda.com.py/wp-content/uploads/2023/11/le-male.jpg" alt="Perfumes de diseñador Tester">
-      <h3>Perfumes de diseñador Tester(consultar precio en Whatsapp</h3>
-      <p>100ml: $ </p>
-    </div>
-
-    
-</section>
-
-  <section class="formulario">
-    <h2>Hacer un pedido</h2>
-    <form action="#" method="POST">
-      <label for="nombre">Nombre y Apellido</label>
-      <input type="text" id="nombre" name="nombre" required>
-
-      <label for="telefono">Teléfono</label>
-      <input type="tel" id="telefono" name="telefono" required>
-
-      <label for="perfume">Perfume elegido</label>
-      <select name="perfume" id="perfume" required>
-        <option value="" disabled selected>Seleccionar perfume</option>
-        <!-- Botellas -->
-        <option value="$ 69000">Liquid Brun - Botella 100ml</option>
-        <option value="$ 55000">Hawas for Him - Botella 100ml</option>
-        <option value="$ 64000">Hawas Black - Botella 100ml</option>
-        <option value="$ 62000">Hawas Ice - Botella 100ml</option>
-        <option value="$ 66000">Hawas Elixir - Botella 100ml</option>
-        <option value="$ 88000">Bharara King - Botella 100ml</option>
-        <option value="$ 85000">Amber Oud - Botella 100ml</option>
-        <option value="$ 57000">9PM - Botella 100ml </option>
-        <option value="$ 62000">9PM Rebel - Botella 100ml </option>
-        <option value="$ 62000">Art of Arabia 1 - 100ml</option>
-        <option value="$ 63000">Club de Nuit Iconic - 100ml</option>
-        <option value="$ 61000">Club de Nuit Urban Man Elixir - 100ml</option>
-        <option value="$ 47000">Hayatti - 100ml</option>
-        <option value="$ 55000">Hawas for Him - 100ml</option>
-        <option value="$ 54000">Ishq Al Shuyukh Gold - 100ml</option>
-        <option value="$ 46000">Jean Lowe Immortal - 100ml</option>
-        <option value="$ 59000">Khamrah Qahwa - 100ml</option>
-        <option value="$ 60000">Lataffa Kingdom - 100ml</option>
-        <option value="$ 57000">Lataffa Yara Rose - 100ml</option>
-        <option value="$ 63000">Supremacy Not Only Intense - 100ml</option>
-        <option value="$ 62000">Vintage Radio - 100ml</option>
-        <option value="$ 50000">Asad Botella 100ml</option>
-        <option value="$ 59000">Asad Bourbon 100ml - </option>
-        <option value="$ 33000">AirPods Pro 2(con garantia apple de 1 año)</option>
-        <option value="$ 21000">Cargador Iphone Certificado 20W</option>
-        <!-- Decants -->
-        <option value="$ 7500">9PM - Decant 5ml</option>
-        <option value="$ 9000">9PM Rebel - Decant 5ml</option>
-        <option value="$ 9000">Art of Arabia 1 - Decant 5ml</option>
-        <option value="$ 12000">Bharara King - Decant 5ml</option>
-        <option value="$ 9000">Club de Nuit Iconic - Decant 5ml</option>
-        <option value="$ 8600">Club de Nuit Urban Man Elixir - Decant 5ml</option>
-        <option value="$ 7000">Hayatti - Decant 5ml</option>
-        <option value="$ 8000">Hawas for Him - Decant 5ml</option>
-        <option value="$ 7500">Ishq Al Shuyukh Gold - Decant 5ml</option>
-        <option value="$ 7000">Jean Lowe Immortal - Decant 5ml</option>
-        <option value="$ 8500">Khamrah Qahwa - Decant 5ml</option>
-        <option value="$ 9000">Lataffa Kingdom - Decant 5ml</option>
-        <option value="$ 8000">Lataffa Yara Rose - Decant 5ml</option>
-        <option value="$ 10000">Supremacy Not Only Intense - Decant 5ml</option>
-        <option value="$ 9000">Vintage Radio - Decant 5ml</option>
-      </select>
-
-      <p id="precio"></p>
-
-      <label for="pago">Forma de pago</label>
-      <select name="pago" id="pago" required>
-        <option value="Transferencia bancaria">Transferencia bancaria</option>
-        <option value="Mercado Pago">Mercado Pago</option>
-      </select>
-
-      <label for="direccion">Dirección de envío</label>
-      <textarea name="direccion" id="direccion" rows="3" required></textarea>
-
-      <p><strong>CBU para transferencias:</strong> 0000003100095256660678</p>
-
-      <button type="submit">Enviar pedido</button>
-    </form>
-
-    <h2>Decants disponibles (5ml)</h2>
-    <ul>
-      <li>9PM - $ 7500</li>
-      <li>9PM Rebel - $ 9000 </li>
-      <li>Art of Arabia 1 - $ 9000</li>
-      <li>Bharara King - $ 12000</li>
-      <li>Club de Nuit Iconic - $ 9000</li>
-      <li>Club de Nuit Urban Man Elixir - $ 8600</li>
-      <li>Hayatti - $ 7000</li>
-      <li>Hawas for Him - $ 8000</li>
-      <li>Ishq Al Shuyukh Gold - $ 7500</li>
-      <li>Jean Lowe Immortal - $ 7000</li>
-      <li>Khamrah Qahwa - $ 8500</li>
-      <li>Lataffa Kingdom - $ 9000</li>
-      <li>Lataffa Yara Rose - $ 8000</li>
-      <li>Supremacy Not Only Intense - $ 10000</li>
-      <li>Vintage Radio - $ 9000</li>
-    </ul>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Perfumes Árabes. Todos los derechos reservados.</p>
-    <p>WhatsApp: <a href="https://wa.me/541160065713" target="_blank">+54 11 6006-5713</a></p>
-  </footer>
+  <section class="pedido" id="formulario">
+    <h2>Hacé tu pedido</h2>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Tu nombre">
 
-  <a href="https://wa.me/541160065713" class="whatsapp-float" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-  </a>
+    <label for="whatsapp">WhatsApp:</label>
+    <input type="text" id="whatsapp" placeholder="Número con código país, ej: 5411...">
+
+    <label for="producto">Producto:</label>
+    <textarea id="producto" placeholder="Nombre del producto y cantidad"></textarea>
+
+    <button onclick="enviarPedido()">Enviar por WhatsApp</button>
+  </section>
 
   <script>
-    document.getElementById("perfume").addEventListener("change", function() {
-      const precio = this.options[this.selectedIndex].value;
-      document.getElementById("precio").textContent = precio ? "Precio: " + precio : "";
-    });
+    function pedir(producto) {
+      const telefono = "541160065713";
+      const mensaje = `Hola, quiero hacer un pedido de: ${producto}`;
+      window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
+    }
 
-    document.querySelector('.formulario form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const nombre = document.getElementById('nombre').value;
-      const telefono = document.getElementById('telefono').value;
-      const perfume = document.getElementById('perfume').options[document.getElementById('perfume').selectedIndex].text;
-      const pago = document.getElementById('pago').value;
-      const direccion = document.getElementById('direccion').value;
+    function enviarPedido() {
+      const nombre = document.getElementById("nombre").value.trim();
+      const whatsapp = document.getElementById("whatsapp").value.trim();
+      const producto = document.getElementById("producto").value.trim();
 
-      const mensaje = encodeURIComponent(
-        `Nuevo pedido:%0A%0ANombre: ${nombre}%0ATeléfono: ${telefono}%0APerfume: ${perfume}%0AForma de pago: ${pago}%0ADirección: ${direccion}`
-      );
+      if (!nombre || !whatsapp || !producto) {
+        alert("Por favor completá todos los campos.");
+        return;
+      }
 
-      window.location.href = `https://wa.me/541160065713?text=${mensaje}`;
-    });
+      const mensaje = `Hola, mi nombre es ${nombre}. Quiero hacer un pedido de: ${producto}`;
+      window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje)}`, "_blank");
+    }
   </script>
 </body>
 </html>
