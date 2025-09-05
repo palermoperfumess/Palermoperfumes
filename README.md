@@ -161,10 +161,44 @@
   <header>
     <h1>Tienda de Perfumes y Tecnología</h1>
     <p>Envíos a todo el país. Hacé tu pedido directo por WhatsApp o con el formulario.</p>
+    <p>Se puede pagar al recibir el producto Solo en CABA.</p>
+    <a href="#formulario" class="ir-pedido">Hacé tu pedido</a>
+
   </header>
-
-  <a href="#formulario" class="ir-pedido">Ir al formulario de pedido</a>
-
+  <h2>Tecnología</h2>
+  <section class="galeria" id="tecnologia">
+    <div class="producto">
+      <img src="https://www.apple.com/v/airpods-pro/n/images/meta/og__eui2mpgzwyaa_overview.png" alt="AirPods Pro 2">
+      <h3>AirPods Pro 2 (Garantía de 1 Mes)</h3>
+      <h3>Calidad PREMIUM!!</h3>
+      <p>$33000</p>
+      <button class="btn" onclick="pedir('AirPods Pro 2 - $33000')">Pedir</button>
+    </div>
+    <div class="producto">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_641270-MLA77137899388_062024-O.webp" alt="Cargador Iphone Certificado 20W">
+      <h3>Cargador Iphone Certificado 20W</h3>
+      <p>$21000</p>
+      <button class="btn" onclick="pedir('Cargador Iphone Certificado 20W - $21000')">Pedir</button>
+    </div>
+    <div class="producto">
+      <img src="https://www.mink.com.ar/qloud/ryr/fotos/23864-1.jpg" alt="Cargador portatil Magsafe">
+      <h3>Cargador portatil Magsafe</h3>
+      <p>$26000</p>
+      <button class="btn" onclick="pedir('Cargador portatil Magsafe - $26000')">Pedir</button>
+    </div>
+    <div class="producto">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_902179-MLA90279728907_082025-O.webp" alt="Celular Redmi 15C">
+      <h3>Celular Redmi 15C 128gb 8gb ram</h3>
+      <p>$225000</p>
+      <button class="btn" onclick="pedir('Redmi 15 C - $225000')">Pedir</button>
+    </div>
+    <div class="producto">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_963050-MLA87770878402_072025-O.webp" alt="Fundas Silicone Case Iphone">
+      <h3>Fundas Silicone Case Iphone</h3>
+      <p>$12000</p>
+      <button class="btn" onclick="pedir('Fundas Silicone Case- $12000')">Pedir</button>
+  </section>
+  
   <h2>Perfumes</h2>
   <section class="galeria" id="perfumes">
     <div class="producto">
@@ -241,6 +275,12 @@
       <p>Botella 100ml: $69000</p>
       <p>Decant 5ml: $9000</p>
       <button class="btn" onclick="pedir('Art Of Arabia 1 - Botella 100ml')">Pedir</button>
+    </div>
+    <div class="producto">
+      <img src="https://simplicityar.vtexassets.com/arquivos/ids/187568/242461_edp-lattafa-badee-al-oud-honor-glory-x-100-ml_imagen-2.jpg?v=638793894569830000" alt="Honor and Glory">
+      <h3>Honor and Glory</h3>
+      <p>Botella 100ml: $59000</p>
+      <button class="btn" onclick="pedir('Honor and Glory - Botella 100ml')">Pedir</button>
     </div>
 
     <div class="producto">
@@ -338,21 +378,6 @@
     </div>
   </section>
 
-  <h2>Tecnología</h2>
-  <section class="galeria" id="tecnologia">
-    <div class="producto">
-      <img src="https://www.apple.com/v/airpods-pro/n/images/meta/og__eui2mpgzwyaa_overview.png" alt="AirPods Pro 2">
-      <h3>AirPods Pro 2 (garantía de 1 mes)</h3>
-      <p>$33000</p>
-      <button class="btn" onclick="pedir('AirPods Pro 2 - $33000')">Pedir</button>
-    </div>
-    <div class="producto">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_641270-MLA77137899388_062024-O.webp" alt="Cargador Iphone Certificado 20W">
-      <h3>Cargador Iphone Certificado 20W</h3>
-      <p>$21000</p>
-      <button class="btn" onclick="pedir('Cargador Iphone Certificado 20W - $21000')">Pedir</button>
-    </div>
-  </section>
 
   <section class="pedido" id="formulario">
     <h2>Hacé tu pedido</h2>
@@ -362,9 +387,44 @@
     <label for="whatsapp">WhatsApp:</label>
     <input type="text" id="whatsapp" placeholder="Número con código país, ej: 5411...">
 
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" placeholder="Tu dirección">
+
+    <label for="codigoPostal">Código Postal:</label>
+    <input type="text" id="codigoPostal" placeholder="Tu código postal">
+
     <label for="producto">Producto:</label>
     <textarea id="producto" placeholder="Nombre del producto y cantidad"></textarea>
+    <label for="cbu">CBU para pago:</label>
+    <input type="text" id="cbu" value="0000003100095256660678" readonly style="background:#eee;">
+  
 
+    <label for="comprobante">Foto del comprobante:</label>
+    <input type="file" id="comprobante" accept="image/*">
+
+    <script>
+      function enviarPedido() {
+        const nombre = document.getElementById("nombre").value.trim();
+        const whatsapp = document.getElementById("whatsapp").value.trim();
+        const direccion = document.getElementById("direccion").value.trim();
+        const codigoPostal = document.getElementById("codigoPostal").value.trim();
+        const producto = document.getElementById("producto").value.trim();
+        const comprobanteInput = document.getElementById("comprobante");
+
+        const mensaje = `Hola, mi nombre es ${nombre}. Quiero hacer un pedido de: ${producto}\nDirección: ${direccion}\nCódigo Postal: ${codigoPostal}`;
+        
+        if (comprobanteInput.files.length > 0) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+        alert("No es posible enviar la imagen automáticamente por WhatsApp Web. Por favor, adjuntá la foto manualmente en el chat.");
+        window.open(`https://api.whatsapp.com/send/?phone=541160065713&text=${encodeURIComponent(mensaje)}`, "_blank");
+          };
+          reader.readAsDataURL(comprobanteInput.files[0]);
+        } else {
+          window.open(`https://api.whatsapp.com/send/?phone=541160065713&text=${encodeURIComponent(mensaje)}`, "_blank");
+        }
+      }
+    </script>
     <button onclick="enviarPedido()">Enviar por WhatsApp</button>
   </section>
 
@@ -372,22 +432,13 @@
     function pedir(producto) {
       const telefono = "541160065713";
       const mensaje = `Hola, quiero hacer un pedido de: ${producto}`;
-      window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
-    }
-
-    function enviarPedido() {
-      const nombre = document.getElementById("nombre").value.trim();
-      const whatsapp = document.getElementById("whatsapp").value.trim();
-      const producto = document.getElementById("producto").value.trim();
-
-      if (!nombre || !whatsapp || !producto) {
-        alert("Por favor completá todos los campos.");
-        return;
+      const direccion = prompt("Ingresá tu dirección:");
+      const codigoPostal = prompt("Ingresá tu código postal:");
+      if (direccion && codigoPostal) {
+        const mensajeCompleto = `Hola, quiero hacer un pedido de: ${producto}\nDirección: ${direccion}\nCódigo Postal: ${codigoPostal}`;
+        window.open(`https://api.whatsapp.com/send/?phone=${telefono}&text=${encodeURIComponent(mensajeCompleto)}`, "_blank");
+      } else {
+        alert("Por favor, ingresá tu dirección y código postal para continuar con el pedido.");
       }
-
-      const mensaje = `Hola, mi nombre es ${nombre}. Quiero hacer un pedido de: ${producto}`;
-      window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje)}`, "_blank");
     }
   </script>
-</body>
-</html>
