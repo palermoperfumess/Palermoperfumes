@@ -1,6 +1,8 @@
 
 <html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda de Perfumes y Tecnología</title>
   <style>
     body {
@@ -11,10 +13,37 @@
       scroll-behavior: smooth;
     }
 
+    /* Barra de navegación */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0.8rem;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #27ae60;
+    }
+
     header {
       background: #111;
       color: white;
-      padding: 1.5rem;
+      padding: 4.5rem 1rem 1.5rem 1rem;
       text-align: center;
     }
 
@@ -138,6 +167,10 @@
     }
 
     @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
       .producto img {
         height: 120px;
       }
@@ -158,13 +191,21 @@
   </style>
 </head>
 <body>
+  <!-- NAV -->
+  <nav>
+    <a href="#tecnologia">Tecnología</a>
+    <a href="#perfumes">Perfumes</a>
+    <a href="#formulario">Pedido</a>
+  </nav>
+
   <header>
     <h1>Tienda de Perfumes y Tecnología</h1>
     <p>Envíos a todo el país. Hacé tu pedido directo por WhatsApp o con el formulario.</p>
-    <p>Se puede pagar al recibir el producto Solo en CABA.</p>
+    <p>Se puede pagar al recibir el producto solo en CABA.</p>
     <a href="#formulario" class="ir-pedido">Hacé tu pedido</a>
-
   </header>
+
+ </header>
   <h2>Tecnología</h2>
   <section class="galeria" id="tecnologia">
     <div class="producto">
@@ -198,7 +239,6 @@
       <p>$12000</p>
       <button class="btn" onclick="pedir('Fundas Silicone Case- $12000')">Pedir</button>
   </section>
-  
   <h2>Perfumes</h2>
   <section class="galeria" id="perfumes">
     <div class="producto">
@@ -377,8 +417,7 @@
       <button class="btn" onclick="pedir('Asad Bourbon - Botella 100ml')">Pedir</button>
     </div>
   </section>
-
-
+  <!-- FORMULARIO PEDIDO -->
   <section class="pedido" id="formulario">
     <h2>Hacé tu pedido</h2>
     <label for="nombre">Nombre:</label>
@@ -395,43 +434,19 @@
 
     <label for="producto">Producto:</label>
     <textarea id="producto" placeholder="Nombre del producto y cantidad"></textarea>
+
     <label for="cbu">CBU para pago:</label>
     <input type="text" id="cbu" value="0000003100095256660678" readonly style="background:#eee;">
-  
 
     <label for="comprobante">Foto del comprobante:</label>
     <input type="file" id="comprobante" accept="image/*">
 
-    <script>
-      function enviarPedido() {
-        const nombre = document.getElementById("nombre").value.trim();
-        const whatsapp = document.getElementById("whatsapp").value.trim();
-        const direccion = document.getElementById("direccion").value.trim();
-        const codigoPostal = document.getElementById("codigoPostal").value.trim();
-        const producto = document.getElementById("producto").value.trim();
-        const comprobanteInput = document.getElementById("comprobante");
-
-        const mensaje = `Hola, mi nombre es ${nombre}. Quiero hacer un pedido de: ${producto}\nDirección: ${direccion}\nCódigo Postal: ${codigoPostal}`;
-        
-        if (comprobanteInput.files.length > 0) {
-          const reader = new FileReader();
-          reader.onload = function(e) {
-        alert("No es posible enviar la imagen automáticamente por WhatsApp Web. Por favor, adjuntá la foto manualmente en el chat.");
-        window.open(`https://api.whatsapp.com/send/?phone=541160065713&text=${encodeURIComponent(mensaje)}`, "_blank");
-          };
-          reader.readAsDataURL(comprobanteInput.files[0]);
-        } else {
-          window.open(`https://api.whatsapp.com/send/?phone=541160065713&text=${encodeURIComponent(mensaje)}`, "_blank");
-        }
-      }
-    </script>
     <button onclick="enviarPedido()">Enviar por WhatsApp</button>
   </section>
 
   <script>
     function pedir(producto) {
       const telefono = "541160065713";
-      const mensaje = `Hola, quiero hacer un pedido de: ${producto}`;
       const direccion = prompt("Ingresá tu dirección:");
       const codigoPostal = prompt("Ingresá tu código postal:");
       if (direccion && codigoPostal) {
@@ -441,4 +456,17 @@
         alert("Por favor, ingresá tu dirección y código postal para continuar con el pedido.");
       }
     }
+
+    function enviarPedido() {
+      const nombre = document.getElementById("nombre").value.trim();
+      const whatsapp = document.getElementById("whatsapp").value.trim();
+      const direccion = document.getElementById("direccion").value.trim();
+      const codigoPostal = document.getElementById("codigoPostal").value.trim();
+      const producto = document.getElementById("producto").value.trim();
+
+      const mensaje = `Hola, mi nombre es ${nombre}. Quiero hacer un pedido de: ${producto}\nDirección: ${direccion}\nCódigo Postal: ${codigoPostal}`;
+      window.open(`https://api.whatsapp.com/send/?phone=541160065713&text=${encodeURIComponent(mensaje)}`, "_blank");
+    }
   </script>
+</body>
+</html>
