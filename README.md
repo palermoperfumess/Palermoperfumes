@@ -1,247 +1,224 @@
-
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda de Perfumes y Tecnología</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      scroll-behavior: smooth;
-    }
-
-    /* Barra de navegación */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #111;
-      color: white;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 0.8rem;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 0.95rem;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #27ae60;
-    }
-
-    header {
-      background: #111;
-      color: white;
-      padding: 4.5rem 1rem 1.5rem 1rem;
-      text-align: center;
-    }
-
-    h2 {
-      text-align: center;
-      margin: 1rem 0;
-    }
-
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
-    }
-
-    .producto {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 0.8rem;
-      text-align: center;
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .producto:hover {
-      transform: translateY(-5px);
-    }
-
-    .producto img {
-      max-width: 100%;
-      height: 140px;
-      object-fit: contain;
-      border-radius: 10px;
-    }
-
-    .producto h3 {
-      font-size: 0.9rem;
-      margin: 0.5rem 0;
-    }
-
-    .producto p {
-      margin: 0.3rem 0;
-      font-size: 0.8rem;
-    }
-
-    .btn {
-      margin-top: 0.4rem;
-      padding: 0.4rem 0.8rem;
-      border: none;
-      background: #111;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 0.8rem;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #444;
-    }
-
-    .pedido {
-      background: white;
-      padding: 1rem;
-      margin: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .pedido h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .pedido label {
-      display: block;
-      margin: 0.5rem 0 0.2rem 0;
-      font-weight: bold;
-    }
-
-    .pedido input, .pedido textarea, .pedido select {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 0.8rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 0.9rem;
-    }
-
-    .pedido button {
-      width: 100%;
-      padding: 0.7rem;
-      background: #111;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s;
-    }
-
-    .pedido button:hover {
-      background: #444;
-    }
-
-    .ir-pedido {
-      display: block;
-      width: fit-content;
-      margin: 0 auto 1rem auto;
-      padding: 0.5rem 1rem;
-      background: #27ae60;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .ir-pedido:hover {
-      background: #219150;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      .producto img {
-        height: 120px;
-      }
-      .producto h3 {
-        font-size: 0.85rem;
-      }
-      .producto p {
-        font-size: 0.75rem;
-      }
-      .btn {
-        font-size: 0.75rem;
-        padding: 0.35rem 0.6rem;
-      }
-      .pedido input, .pedido textarea, .pedido select {
-        font-size: 0.85rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Perfumes y Tecnología</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            scroll-behavior: smooth;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #111;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0.8rem;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #27ae60;
+        }
+        header {
+            background: #111;
+            color: white;
+            padding: 4.5rem 1rem 1.5rem 1rem;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .producto {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 0.8rem;
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+        }
+        .producto:hover {
+            transform: translateY(-5px);
+        }
+        .producto img {
+            max-width: 100%;
+            height: 140px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        .producto h3 {
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+        .producto p {
+            margin: 0.3rem 0;
+            font-size: 0.8rem;
+        }
+        .btn {
+            margin-top: 0.4rem;
+            padding: 0.4rem 0.8rem;
+            border: none;
+            background: #111;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #444;
+        }
+        .pedido {
+            background: white;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .pedido h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .pedido label {
+            display: block;
+            margin: 0.5rem 0 0.2rem 0;
+            font-weight: bold;
+        }
+        .pedido input, .pedido textarea, .pedido select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 0.9rem;
+        }
+        .pedido button {
+            width: 100%;
+            padding: 0.7rem;
+            background: #111;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .pedido button:hover {
+            background: #444;
+        }
+        .ir-pedido {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 1rem auto;
+            padding: 0.5rem 1rem;
+            background: #27ae60;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .ir-pedido:hover {
+            background: #219150;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .producto img {
+                height: 120px;
+            }
+            .producto h3 {
+                font-size: 0.85rem;
+            }
+            .producto p {
+                font-size: 0.75rem;
+            }
+            .btn {
+                font-size: 0.75rem;
+                padding: 0.35rem 0.6rem;
+            }
+            .pedido input, .pedido textarea, .pedido select {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- NAV -->
-  <nav>
-    <a href="#tecnologia">Tecnología</a>
-    <a href="#perfumes">Perfumes</a>
-    <a href="#formulario">Pedido</a>
-  </nav>
+    <!-- NAV -->
+    <nav>
+        <a href="#tecnologia">Tecnología</a>
+        <a href="#perfumes">Perfumes</a>
+        <a href="#formulario">Pedido</a>
+    </nav>
 
-  <header>
-    <h1>Tienda de Perfumes y Tecnología</h1>
-    <p>Envíos a todo el país. Hacé tu pedido directo por WhatsApp o con el formulario.</p>
-    <p>Se puede pagar al recibir el producto solo en CABA.</p>
-    <a href="#formulario" class="ir-pedido">Hacé tu pedido</a>
-  </header>
+    <header>
+        <h1>Tienda de Perfumes y Tecnología</h1>
+        <p>Envíos a todo el país. Hacé tu pedido directo por WhatsApp o con el formulario.</p>
+        <p>Se puede pagar al recibir el producto solo en CABA.</p>
+        <a href="#formulario" class="ir-pedido">Hacé tu pedido</a>
+    </header>
 
- </header>
-  <h2>Tecnología</h2>
-  <section class="galeria" id="tecnologia">
-    <div class="producto">
-      <img src="https://www.apple.com/v/airpods-pro/n/images/meta/og__eui2mpgzwyaa_overview.png" alt="AirPods Pro 2">
-      <h3>AirPods Pro 2 (Garantía de 1 Mes)</h3>
-      <h3>Calidad PREMIUM!!</h3>
-      <p>$33000</p>
-      <button class="btn" onclick="pedir('AirPods Pro 2 - $33000')">Pedir</button>
-    </div>
-    <div class="producto">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_641270-MLA77137899388_062024-O.webp" alt="Cargador Iphone Certificado 20W">
-      <h3>Cargador Iphone Certificado 20W</h3>
-      <p>$21000</p>
-      <button class="btn" onclick="pedir('Cargador Iphone Certificado 20W - $21000')">Pedir</button>
-    </div>
-    <div class="producto">
-      <img src="https://www.mink.com.ar/qloud/ryr/fotos/23864-1.jpg" alt="Cargador portatil Magsafe">
-      <h3>Cargador portatil Magsafe</h3>
-      <p>$26000</p>
-      <button class="btn" onclick="pedir('Cargador portatil Magsafe - $26000')">Pedir</button>
-    </div>
-    <div class="producto">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_902179-MLA90279728907_082025-O.webp" alt="Celular Redmi 15C">
-      <h3>Celular Redmi 15C 128gb 8gb ram</h3>
-      <p>$225000</p>
-      <button class="btn" onclick="pedir('Redmi 15 C - $225000')">Pedir</button>
-    </div>
-    <div class="producto">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_963050-MLA87770878402_072025-O.webp" alt="Fundas Silicone Case Iphone">
-      <h3>Fundas Silicone Case Iphone</h3>
-      <p>$12000</p>
-      <button class="btn" onclick="pedir('Fundas Silicone Case- $12000')">Pedir</button>
-  </section>
-  <h2>Perfumes</h2>
-  <section class="galeria" id="perfumes">
-    <div class="producto">
+    <h2>Tecnología</h2>
+    <section class="galeria" id="tecnologia">
+        <div class="producto">
+            <img src="https://www.apple.com/v/airpods-pro/n/images/meta/og__eui2mpgzwyaa_overview.png" alt="AirPods Pro 2">
+            <h3>AirPods Pro 2 (Garantía de 1 Mes)</h3>
+            <h3>Calidad PREMIUM!!</h3>
+            <p>$33000</p>
+            <button class="btn" onclick="pedir('AirPods Pro 2 - $33000')">Pedir</button>
+        </div>
+        <div class="producto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_641270-MLA77137899388_062024-O.webp" alt="Cargador Iphone Certificado 20W">
+            <h3>Cargador Iphone Certificado 20W</h3>
+            <p>$21000</p>
+            <button class="btn" onclick="pedir('Cargador Iphone Certificado 20W - $21000')">Pedir</button>
+        </div>
+        <div class="producto">
+            <img src="https://www.mink.com.ar/qloud/ryr/fotos/23864-1.jpg" alt="Cargador portatil Magsafe">
+            <h3>Cargador portatil Magsafe</h3>
+            <p>$26000</p>
+            <button class="btn" onclick="pedir('Cargador portatil Magsafe - $26000')">Pedir</button>
+        </div>
+        <div class="producto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_902179-MLA90279728907_082025-O.webp" alt="Celular Redmi 15C">
+            <h3>Celular Redmi 15C 128gb 8gb ram</h3>
+            <p>$225000</p>
+            <button class="btn" onclick="pedir('Redmi 15 C - $225000')">Pedir</button>
+        </div>
+        <div class="producto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_963050-MLA87770878402_072025-O.webp" alt="Fundas Silicone Case Iphone">
+            <h3>Fundas Silicone Case Iphone</h3>
+            <p>$12000</p>
+            <button class="btn" onclick="pedir('Fundas Silicone Case- $12000')">Pedir</button>
+        </div>
+    </section>
+
+    <h2>Perfumes</h2>
+    <section class="galeria" id="perfumes">
+        <div class="producto">
       <img src="https://http2.mlstatic.com/D_Q_NP_852085-MLA80071541612_102024-O.webp" alt="Liquid Brun">
       <h3>Liquid Brun</h3>
       <p>Botella 100ml: $78000</p>
@@ -416,57 +393,49 @@
       <p>Botella 100ml: $66000</p>
       <button class="btn" onclick="pedir('Asad Bourbon - Botella 100ml')">Pedir</button>
     </div>
-  </section>
-  <!-- FORMULARIO PEDIDO -->
-  <section class="pedido" id="formulario">
-    <h2>Hacé tu pedido</h2>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" placeholder="Tu nombre">
+    </section>
 
-    <label for="whatsapp">WhatsApp:</label>
-    <input type="text" id="whatsapp" placeholder="Número con código país, ej: 5411...">
+    <!-- FORMULARIO PEDIDO -->
+    <section class="pedido" id="formulario">
+        <h2>Hacé tu pedido</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Tu nombre">
+        <label for="whatsapp">WhatsApp:</label>
+        <input type="text" id="whatsapp" placeholder="Número con código país, ej: 5411...">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" placeholder="Tu dirección">
+        <label for="codigoPostal">Código Postal:</label>
+        <input type="text" id="codigoPostal" placeholder="Tu código postal">
+        <label for="producto">Producto:</label>
+        <textarea id="producto" placeholder="Nombre del producto y cantidad"></textarea>
+        <label for="cbu">CBU para pago:</label>
+        <input type="text" id="cbu" value="0000003100095256660678" readonly style="background:#eee;">
+        <label for="comprobante">Foto del comprobante:</label>
+        <input type="file" id="comprobante" accept="image/*">
+        <button onclick="enviarPedido()">Enviar por WhatsApp</button>
+    </section>
 
-    <label for="direccion">Dirección:</label>
-    <input type="text" id="direccion" placeholder="Tu dirección">
-
-    <label for="codigoPostal">Código Postal:</label>
-    <input type="text" id="codigoPostal" placeholder="Tu código postal">
-
-    <label for="producto">Producto:</label>
-    <textarea id="producto" placeholder="Nombre del producto y cantidad"></textarea>
-
-    <label for="cbu">CBU para pago:</label>
-    <input type="text" id="cbu" value="0000003100095256660678" readonly style="background:#eee;">
-
-    <label for="comprobante">Foto del comprobante:</label>
-    <input type="file" id="comprobante" accept="image/*">
-
-    <button onclick="enviarPedido()">Enviar por WhatsApp</button>
-  </section>
-
-  <script>
-    function pedir(producto) {
-      const telefono = "541160065713";
-      const direccion = prompt("Ingresá tu dirección:");
-      const codigoPostal = prompt("Ingresá tu código postal:");
-      if (direccion && codigoPostal) {
-        const mensajeCompleto = `Hola, quiero hacer un pedido de: ${producto}\nDirección: ${direccion}\nCódigo Postal: ${codigoPostal}`;
-        window.open(`https://api.whatsapp.com/send/?phone=${telefono}&text=${encodeURIComponent(mensajeCompleto)}`, "_blank");
-      } else {
-        alert("Por favor, ingresá tu dirección y código postal para continuar con el pedido.");
-      }
-    }
-
-    function enviarPedido() {
-      const nombre = document.getElementById("nombre").value.trim();
-      const whatsapp = document.getElementById("whatsapp").value.trim();
-      const direccion = document.getElementById("direccion").value.trim();
-      const codigoPostal = document.getElementById("codigoPostal").value.trim();
-      const producto = document.getElementById("producto").value.trim();
-
-      const mensaje = `Hola, mi nombre es ${nombre}. Quiero hacer un pedido de: ${producto}\nDirección: ${direccion}\nCódigo Postal: ${codigoPostal}`;
-      window.open(`https://api.whatsapp.com/send/?phone=541160065713&text=${encodeURIComponent(mensaje)}`, "_blank");
-    }
-  </script>
+    <script>
+        function pedir(producto) {
+            const telefono = "541160065713";
+            const direccion = prompt("Ingresá tu dirección:");
+            const codigoPostal = prompt("Ingresá tu código postal:");
+            if (direccion && codigoPostal) {
+                const mensajeCompleto = `Hola, quiero hacer un pedido de: ${producto}\nDirección: ${direccion}\nCódigo Postal: ${codigoPostal}`;
+                window.open(`https://api.whatsapp.com/send/?phone=${telefono}&text=${encodeURIComponent(mensajeCompleto)}`, "_blank");
+            } else {
+                alert("Por favor, ingresá tu dirección y código postal para continuar con el pedido.");
+            }
+        }
+        function enviarPedido() {
+            const nombre = document.getElementById("nombre").value.trim();
+            const whatsapp = document.getElementById("whatsapp").value.trim();
+            const direccion = document.getElementById("direccion").value.trim();
+            const codigoPostal = document.getElementById("codigoPostal").value.trim();
+            const producto = document.getElementById("producto").value.trim();
+            const mensaje = `Hola, mi nombre es ${nombre}. Quiero hacer un pedido de: ${producto}\nDirección: ${direccion}\nCódigo Postal: ${codigoPostal}`;
+            window.open(`https://api.whatsapp.com/send/?phone=541160065713&text=${encodeURIComponent(mensaje)}`, "_blank");
+        }
+    </script>
 </body>
 </html>
