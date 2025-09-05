@@ -187,8 +187,8 @@
             <img src="https://www.apple.com/v/airpods-pro/n/images/meta/og__eui2mpgzwyaa_overview.png" alt="AirPods Pro 2">
             <h3>AirPods Pro 2 (Garantía de 1 Mes)</h3>
             <h3>Calidad PREMIUM!!</h3>
-            <p>$33000</p>
-            <button class="btn" onclick="pedir('AirPods Pro 2 - $33000')">Pedir</button>
+            <p>$35000</p>
+            <button class="btn" onclick="pedir('AirPods Pro 2 - $35000')">Pedir</button>
         </div>
         <div class="producto">
             <img src="https://http2.mlstatic.com/D_NQ_NP_641270-MLA77137899388_062024-O.webp" alt="Cargador Iphone Certificado 20W">
