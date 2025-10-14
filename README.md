@@ -10,8 +10,8 @@
   --color-acento: #000000;
   --color-fondo: #f9fafb;
   --color-blanco: #fff;
-  --color-texto: #545353;
-  --color-gris: #777;
+  --color-texto: #333;
+  --color-gris: #666;
   --borde: #e0e0e0;
   --sombra-suave: 0 4px 20px rgba(0,0,0,0.06);
   --fuente: 'Inter', 'Segoe UI', Roboto, sans-serif;
@@ -23,10 +23,9 @@ body {
   background: var(--color-fondo);
   color: var(--color-texto);
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
-/* HEADER */
+
 header {
   background: var(--color-blanco);
   color: var(--color-texto);
@@ -55,21 +54,8 @@ header nav a {
 header nav a:hover {
   color: var(--color-acento);
 }
-.ir-pedido {
-  color: var(--blanco);
-  background: var(--color-primario);
-  padding: 12px 26px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s, transform 0.2s;
-}
-.ir-pedido:hover {
-  background: var(--color-acento);
-  transform: translateY(-2px);
-}
 
-/* SECCIONES */
+
 section {
   width: 92%;
   margin: 50px auto 0 auto;
@@ -83,7 +69,7 @@ h2 {
   font-weight: 600;
 }
 
-/* NOSOTROS */
+
 .nosotros {
   background: var(--color-blanco);
   border-radius: 18px;
@@ -108,7 +94,7 @@ h2 {
   line-height: 1.8;
 }
 
-/* PRODUCTOS */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -148,24 +134,23 @@ h2 {
   margin: 6px 0;
   font-size: 1rem;
 }
-.producto .btn {
+.producto a {
+  display: inline-block;
   margin-top: 12px;
   background: var(--color-primario);
-  color: var(--blanco);
-  border: none;
+  color: var(--color-blanco);
   padding: 10px 28px;
   border-radius: 7px;
-  cursor: pointer;
+  text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
   transition: background 0.3s, transform 0.2s;
 }
-.producto .btn:hover {
+.producto a:hover {
   background: var(--color-acento);
   transform: translateY(-2px);
 }
 
-/* FORMULARIO */
 .pedido {
   background: var(--color-blanco);
   border-radius: 16px;
@@ -181,7 +166,7 @@ h2 {
   font-weight: 600;
   color: var(--color-texto);
 }
-.pedido input, .pedido select, .pedido textarea {
+.pedido input, .pedido textarea {
   padding: 12px;
   border: 1.5px solid var(--borde);
   border-radius: 7px;
@@ -196,7 +181,7 @@ h2 {
 }
 .pedido button {
   background: var(--color-primario);
-  color: var(--blanco);
+  color: var(--color-blanco);
   border: none;
   padding: 13px;
   border-radius: 7px;
@@ -211,7 +196,6 @@ h2 {
   transform: translateY(-2px);
 }
 
-/* FOOTER */
 footer {
   background: var(--color-blanco);
   color: var(--color-texto);
@@ -223,7 +207,7 @@ footer {
   letter-spacing: 0.3px;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   header {
     flex-direction: column;
@@ -268,7 +252,7 @@ footer {
 <section id="productos">
   <h2>Perfumes</h2>
   <div class="grid">
-    <div class="producto">
+     <div class="producto">
         <img src="https://http2.mlstatic.com/D_Q_NP_852085-MLA80071541612_102024-O.webp" alt="Liquid Brun">
         <h3>Liquid Brun</h3>
         <p>Botella 100ml: $78000</p>
@@ -427,69 +411,30 @@ footer {
 
 <section class="pedido" id="formulario">
   <h2>Hacé tu pedido</h2>
-  <label for="nombre">Nombre:</label>
-  <input type="text" id="nombre" placeholder="Tu nombre">
+  <form action="https://api.whatsapp.com/send" method="get" target="_blank">
+    <input type="hidden" name="phone" value="541160065713">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Tu nombre" required>
 
-  <label for="whatsapp">WhatsApp:</label>
-  <input type="text" id="whatsapp" placeholder="Número con código país, ej: 5411...">
+    <label for="whatsapp">WhatsApp:</label>
+    <input type="text" id="whatsapp" placeholder="Número con código país, ej: 5411..." required>
 
-  <label for="direccion">Dirección:</label>
-  <input type="text" id="direccion" placeholder="Tu dirección">
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" placeholder="Tu dirección" required>
 
-  <label for="codigoPostal">Código Postal:</label>
-  <input type="text" id="codigoPostal" placeholder="Tu código postal">
+    <label for="codigoPostal">Código Postal:</label>
+    <input type="text" id="codigoPostal" placeholder="Tu código postal" required>
 
-  <label for="producto">Producto:</label>
-  <textarea id="producto" placeholder="Nombre del producto y cantidad"></textarea>
+    <label for="producto">Producto:</label>
+    <textarea id="producto" placeholder="Nombre del producto y cantidad" required></textarea>
 
-  <label for="cbu">CBU para pago:</label>
-  <input type="text" id="cbu" value="0000003100095256660678" readonly style="background:#eee;">
-
-  <label for="comprobante">Foto del comprobante:</label>
-  <input type="file" id="comprobante" accept="image/*">
-
-  <button onclick="enviarPedido()">Enviar por WhatsApp</button>
+    <button type="submit">Enviar por WhatsApp</button>
+  </form>
 </section>
 
 <footer>
-  Palermo Store &copy; 2025. Todos los derechos reservados.
+  Palermo Store &copy; 2025. Todos los derechos reservados. Contacto:+54 11 6006-5713
 </footer>
-
-<script>
-function pedir(producto) {
-  const telefono = "541160065713";
-  const direccion = prompt("Ingresá tu dirección:");
-  const codigoPostal = prompt("Ingresá tu código postal:");
-  if(direccion && codigoPostal){
-    const mensaje = `Hola, quiero hacer un pedido de: ${producto}\nDirección: ${direccion}\nCódigo Postal: ${codigoPostal}`;
-    window.open(`https://api.whatsapp.com/send/?phone=${telefono}&text=${encodeURIComponent(mensaje)}`, "_blank");
-  } else {
-    alert("Por favor, ingresá tu dirección y código postal.");
-  }
-}
-
-function enviarPedido() {
-  const nombre = document.getElementById("nombre").value.trim();
-  const whatsapp = document.getElementById("whatsapp").value.trim();
-  const direccion = document.getElementById("direccion").value.trim();
-  const codigoPostal = document.getElementById("codigoPostal").value.trim();
-  const producto = document.getElementById("producto").value.trim();
-  const comprobante = document.getElementById("comprobante");
-
-  if(!nombre || !whatsapp || !direccion || !codigoPostal || !producto){
-    alert("Por favor, completá todos los campos antes de enviar.");
-    return;
-  }
-
-  const mensaje = `Hola, mi nombre es ${nombre}. Quiero hacer un pedido de: ${producto}\nWhatsApp: ${whatsapp}\nDirección: ${direccion}\nCódigo Postal: ${codigoPostal}`;
-
-  if(comprobante.files.length > 0){
-    alert("No es posible enviar la imagen automáticamente por WhatsApp Web. Adjuntá la foto manualmente en el chat.");
-  }
-
-  window.open(`https://api.whatsapp.com/send/?phone=541160065713&text=${encodeURIComponent(mensaje)}`, "_blank");
-}
-</script>
 
 </body>
 </html>
