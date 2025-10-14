@@ -256,155 +256,155 @@ footer {
         <img src="https://http2.mlstatic.com/D_Q_NP_852085-MLA80071541612_102024-O.webp" alt="Liquid Brun">
         <h3>Liquid Brun</h3>
         <p>Botella 100ml: $78000</p>
-        <button class="btn" onclick="pedir('Liquid Brun - $78000')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://d22fxaf9t8d39k.cloudfront.net/d4f256ba89932cfc21fd0fa7d8c13c80d65b40cb9a06428bba7813bfcc037d2d108925.webp" alt="Hawas Black">
         <h3>Hawas Black</h3>
         <p>Botella 100ml: $72000</p>
         <p>Decant 5ml: $9500</p>
-        <button class="btn" onclick="pedir('Hawas Black - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://http2.mlstatic.com/D_609475-MLU77667701668_072024-C.jpg" alt="Hawas for Him">
         <h3>Hawas for Him</h3>
         <p>Botella 100ml: $62000</p>
         <p>Decant 5ml: $9000</p>
-        <button class="btn" onclick="pedir('Hawas for Him - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://d3cdlnm7te7ky2.cloudfront.net/media/catalog/product/cache/1f1b8d9a1b49678555bea203c2f52e39/1/5/155854-b-hawas-ice-men-edp-100ml.jpg" alt="Hawas Ice">
         <h3>Hawas Ice</h3>
         <p>Botella 100ml: $70000</p>
-        <button class="btn" onclick="pedir('Hawas Ice - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.110808.jpg" alt="Hawas Elixir">
         <h3>Hawas Elixir</h3>
         <p>Botella 100ml: $73000</p>
-        <button class="btn" onclick="pedir('Hawas Elixir - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://http2.mlstatic.com/D_NQ_NP_991070-MLA81953006706_022025-O.webp" alt="Bharara King">
         <h3>Bharara King</h3>
         <p>Botella 100ml: $94000</p>
         <p>Decant 5ml: $12000</p>
-        <button class="btn" onclick="pedir('Bharara King - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://http2.mlstatic.com/D_843651-MLU76296948587_052024-C.jpg" alt="Amber Oud">
         <h3>Amber Oud</h3>
         <p>Botella 100ml: $92000</p>
-        <button class="btn" onclick="pedir('Amber Oud - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://http2.mlstatic.com/D_NQ_NP_855959-MLA53669241732_022023-O.webp" alt="9PM">
         <h3>9PM</h3>
         <p>Botella 100ml: $63000</p>
         <p>Decant 5ml: $7500</p>
-        <button class="btn" onclick="pedir('9PM - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://fimgs.net/mdimg/perfume/o.99238.jpg" alt="9PM Rebel">
         <h3>9PM Rebel</h3>
         <p>Botella 100ml: $69000</p>
         <p>Decant 5ml: $9000</p>
-        <button class="btn" onclick="pedir('9PM Rebel - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://u.makeup.com.ua/k/k8/k8hxu147fzcl.jpg" alt="Art of Arabia 1">
         <h3>Art Of Arabia 1</h3>
         <p>Botella 100ml: $69000</p>
         <p>Decant 5ml: $9000</p>
-        <button class="btn" onclick="pedir('Art Of Arabia 1 - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://simplicityar.vtexassets.com/arquivos/ids/187568/242461_edp-lattafa-badee-al-oud-honor-glory-x-100-ml_imagen-2.jpg?v=638793894569830000" alt="Honor and Glory">
         <h3>Honor and Glory</h3>
         <p>Botella 100ml: $59000</p>
-        <button class="btn" onclick="pedir('Honor and Glory - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://fimgs.net/mdimg/perfume/o.78475.jpg" alt="Club de Nuit Iconic">
         <h3>Club de Nuit Iconic</h3>
         <p>Botella 100ml: $72000</p>
         <p>Decant 5ml: $9000</p>
-        <button class="btn" onclick="pedir('Club de Nuit Iconic - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://acdn-us.mitiendanube.com/stores/004/878/940/products/03-a-36b6bee3b801d1e1b817214141637364-1024-1024.jpg" alt="Club de Nuit Urban Man Elixir">
         <h3>Club de Nuit Urban Man Elixir</h3>
         <p>Botella 100ml: $69000</p>
         <p>Decant 5ml: $8600</p>
-        <button class="btn" onclick="pedir('Club de Nuit Urban Man Elixir - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/hayaati-c6426e81b3e9f6bd3b17101000099209-640-0.webp" alt="Lataffa Hayaati">
         <h3>Lataffa Hayaati</h3>
         <p>Botella 100ml: $54000</p>
         <p>Decant 5ml: $7000</p>
-        <button class="btn" onclick="pedir('Lataffa Hayaati - Botella 100ml')">Pedir</button>
+       
       </div>
       <div class="producto">
         <img src="https://perfumescardales.com.ar/wp-content/uploads/2023/06/ishq-gold-1.jpg" alt="Ishq Al Shuyukh Gold">
         <h3>Ishq Al Shuyukh Gold</h3>
         <p>Botella 100ml: $62000</p>
         <p>Decant 5ml: $7500</p>
-        <button class="btn" onclick="pedir('Ishq Al Shuyukh Gold - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://http2.mlstatic.com/D_NQ_NP_794813-MLA82979797869_032025-O.webp" alt="Jean Lowe Immortal">
         <h3>Jean Lowe Immortal</h3>
         <p>Botella 100ml: $52000</p>
         <p>Decant 5ml: $7000</p>
-        <button class="btn" onclick="pedir('Jean Lowe Immortal - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://d3cdlnm7te7ky2.cloudfront.net/media/catalog/product/cache/1f1b8d9a1b49678555bea203c2f52e39/1/5/155511-b-khamrah-qahwa-edp-100ml.jpg" alt="Khamrah Qahwa">
         <h3>Khamrah Qahwa</h3>
         <p>Botella 100ml: $67000</p>
         <p>Decant 5ml: $8500</p>
-        <button class="btn" onclick="pedir('Khamrah Qahwa - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://acdn-us.mitiendanube.com/stores/003/226/824/products/1024-x-1024-px-2025-05-08t201634-631-f0b893b56cadb00ad417467461990687-1024-1024.jpg" alt="Lataffa Kingdom">
         <h3>Lataffa Kingdom</h3>
         <p>Botella 100ml: $71000</p>
         <p>Decant 5ml: $9000</p>
-        <button class="btn" onclick="pedir('Lataffa Kingdom - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://layla-andco.com/cdn/shop/files/DE4B3489-D89C-4E1B-AC03-DCA2FB1D1378.jpg?v=1710768589" alt="Lataffa Yara Rose">
         <h3>Lataffa Yara Rose</h3>
         <p>Botella 100ml: $64000</p>
         <p>Decant 5ml: $8000</p>
-        <button class="btn" onclick="pedir('Lataffa Yara Rose - Botella 100ml')">Pedir</button>
+       
       </div>
       <div class="producto">
         <img src="https://http2.mlstatic.com/D_NQ_NP_886355-MLU74668053191_022024-O.webp" alt="Supremacy Not Only Intense">
         <h3>Supremacy Not Only Intense</h3>
         <p>Botella 100ml: $73000</p>
         <p>Decant 5ml: $10000</p>
-        <button class="btn" onclick="pedir('Supremacy Not Only Intense - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://http2.mlstatic.com/D_NQ_NP_706392-CBT83047220019_032025-O.webp" alt="Vintage Radio">
         <h3>Vintage Radio</h3>
         <p>Botella 100ml: $69000</p>
         <p>Decant 5ml: $9000</p>
-        <button class="btn" onclick="pedir('Vintage Radio - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/asad-d1a6c449c4071fd13017149465284044-480-0.webp" alt="Lataffa Asad">
         <h3>Lataffa Asad</h3>
         <p>Botella 100ml: $58000</p>
-        <button class="btn" onclick="pedir('Lataffa Asad - Botella 100ml')">Pedir</button>
+        
       </div>
       <div class="producto">
         <img src="https://acdn-us.mitiendanube.com/stores/004/407/494/products/asad-bourbon-8333192b3cc78bfa1017364419270910-1024-1024.jpg" alt="Asad Bourbon">
         <h3>Asad Bourbon</h3>
         <p>Botella 100ml: $66000</p>
-        <button class="btn" onclick="pedir('Asad Bourbon - Botella 100ml')">Pedir</button>
+        
       </div>
   </div>
 </section>
