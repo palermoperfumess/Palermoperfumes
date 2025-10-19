@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Palermo Store | Promociones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Palermo Store</h1>
+    <nav aria-label="Menú principal">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="pedido.html">Hacé tu pedido</a>
+      <a href="promociones.html" aria-current="page">Promociones</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="promos-titulo">
+      <h2 id="promos-titulo">Promociones vigentes</h2>
+
+      <div class="nosotros" style="gap:16px;flex-direction:column;">
+        <p>Seleccioná productos y cantidades abajo: el sistema aplicará <strong>automáticamente</strong> la mejor promoción (o podés desactivar la auto-aplicación para comparar).</p>
+        <ul>
+          <li><strong>Promo A:</strong> Llevá 2 productos iguales → 50% en el segundo (se aplica por pares).</li>
+          <li><strong>Promo B:</strong> 3x2 en productos seleccionados → por cada 3 iguales pagás 2.</li>
+          <li><strong>Promo C:</strong> 10% de descuento por compras superiores a $30.000 → aplica sobre el subtotal si conviene.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="calculadora-titulo" style="margin-top:24px;">
+      <h2 id="calculadora-titulo">Calculadora de promociones</h2>
+
+      <form id="formPromos" class="pedido" novalidate>
+        <fieldset style="border:none;padding:0;margin:0;">
+          <legend class="sr-only">Seleccioná productos y cantidades</legend>
+
+          <div id="lineasContainer" aria-live="polite" aria-relevant="additions removals">
+            <!-- filas de producto dinámicas -->
+          </div>
+
+          <div style="display:flex;gap:8px;justify-content:space-between;align-items:center;margin-top:8px;">
+            <button id="agregarLinea" type="button" aria-label="Agregar producto">➕ Agregar producto</button>
+            <button id="limpiar" type="button" aria-label="Limpiar formulario">🧹 Limpiar</button>
+          </div>
+
+          <div style="margin-top:12px;">
+            <label for="promoAuto" style="font-weight:600;">Aplicar automáticamente la mejor promoción</label><br/>
+            <input id="promoAuto" type="checkbox" checked aria-checked="true"> Sí (recomendado)
+          </div>
+
+          <div style="margin-top:18px;">
+            <button id="calcularCarritoPromos" type="button">Calcular total y aplicar promociones</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <aside id="resultadoPromos" class="pedido" style="display:none; margin-top:18px;" aria-live="polite">
+        <h3>Resumen</h3>
+        <p id="resSubtotal"> Subtotal: $0</p>
+        <p id="resDescuentoDetalle"> Descuento detalle: $0</p>
+        <p id="resPromoAplicada" style="color:var(--color-gris); font-weight:600;"></p>
+
+        <div id="detalleLineas" style="white-space:pre-wrap; font-size:0.95rem; color:var(--color-gris); margin-top:8px;"></div>
+      
+        <p id="resTotal" style="font-size:1.1rem; font-weight:700;"> Total a pagar: $0</p>
+        <p id="resAhorro" style="color:green;"></p>
+      </aside>
+    </section>
+
+    <section aria-labelledby="productos-titulo" style="margin-top:36px;">
+      <h2 id="productos-titulo">Algunos productos destacados</h2>
+      <div id="promo-container" class="grid" aria-live="polite"></div>
+      <!-- promo-container será rellenado por promociones.js -->
+    </section>
+  </main>
+
+  <footer>
+    Palermo Store &copy; 2025. Todos los derechos reservados. Contacto:+54 11 6006-5713
+  </footer>
+
+  <script src="promociones.js" defer></script>
+</body>
+</html>
